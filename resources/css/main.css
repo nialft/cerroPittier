@@ -1,0 +1,265 @@
+/* Fondo General Más Amigable */
+body {
+  background-color: #f0f4f8; /* Gris suave claro */
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+}
+
+/* HEADER CON FONDO DE IMAGEN Y NAV INTEGRADO */
+header {
+  background-image: url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  text-align: center;
+  padding: 80px 20px 60px;
+  position: relative;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+header h1,
+header p,
+nav {
+  position: relative;
+  z-index: 1;
+}
+
+/* NAVBAR DENTRO DEL HEADER */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 14px 0;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1em;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav ul li a:hover {
+  background-color: #ffd166;
+  color: #1e3d59;
+}
+
+/* Estilos para la página 'Sobre Nosotros' */
+.card-body h5 {
+  font-size: 1.6em;
+  color: #1e3d59;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.card-body p {
+  font-size: 1.1em;
+  color: #333;
+  line-height: 1.6;
+  margin-top: 15px;
+}
+
+.card-img-top {
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para los botones Ver Detalles y Reservar Ahora */
+button {
+  background-color: #1e3d59 !important; /* Azul oscuro */
+  color: #ffffff; /* Texto blanco */
+  font-size: 1.1em;
+  font-weight: 600;
+  padding: 12px 25px;
+  border-radius: 6px;
+  border: none !important; /* Eliminar borde */
+  outline: none !important; /* Evitar el borde en enfoque */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover (cuando el mouse pasa sobre el botón) */
+button:hover {
+  background-color: #ffd166 !important; /* Amarillo al pasar el mouse */
+  color: #1e3d59 !important; /* Cambiar el texto a azul oscuro */
+}
+
+/* Eliminar bordes adicionales de los botones al estar enfocados */
+button:focus {
+  box-shadow: none !important; /* Eliminar la sombra de enfoque */
+}
+
+/* Asegurarnos de que los botones 'btn-primary' tengan el mismo estilo */
+button.btn-primary {
+  background-color: #1e3d59 !important; /* Azul oscuro */
+  color: #ffffff;
+  border: none !important; /* Eliminar borde */
+}
+
+button.btn-primary:hover {
+  background-color: #ffd166 !important; /* Amarillo en hover */
+  color: #1e3d59 !important; /* Texto en azul oscuro */
+}
+
+button.btn-primary:focus {
+  box-shadow: none !important; /* Eliminar sombra de enfoque */
+}
+
+/* footer */
+footer {
+  background-color: #1e3d59; /* Un azul más oscuro y elegante */
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 80px;
+  border-radius: 15px 15px 0 0; /* Bordes redondeados en la parte superior */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  font-size: 1.1em;
+  font-family: "Segoe UI", sans-serif;
+}
+
+footer a {
+  color: #ffd166;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 4px 8px;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffffff; /* Cambia el color a blanco en el hover */
+}
+
+/* Responsiveness para dispositivos pequeños */
+@media (max-width: 768px) {
+  /* Cambiar el menú a una columna */
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  nav ul li a {
+    font-size: 1.2em;
+    padding: 10px 20px;
+  }
+
+  header {
+    padding: 60px 20px 40px;
+  }
+
+  .intro-section {
+    margin-top: 10px;
+  }
+
+  .form-contacto,
+  .comments-section {
+    margin-top: 20px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Para dispositivos muy pequeños */
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul li a {
+    font-size: 1.1em;
+    padding: 8px 16px;
+  }
+
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  .form-contacto,
+  .comments-section {
+    margin-top: 10px;
+  }
+
+  .form-contacto input,
+  .form-contacto textarea {
+    font-size: 0.9em;
+  }
+
+  footer {
+    padding: 20px 10px;
+  }
+}
+
+/* Estilos para la sección de comentarios */
+.comments-section {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Fondo blanco con un toque de transparencia */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin-top: 40px;
+}
+
+.comments-section h3 {
+  color: #1e3d59; /* Azul oscuro */
+  font-size: 1.6em;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.comment {
+  background-color: #f8f9fa; /* Fondo muy suave para cada comentario */
+  border: 1px solid #e0e0e0; /* Borde sutil */
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.comment:hover {
+  background-color: #ffd166; /* Amarillo suave al pasar el mouse */
+}
+
+.comment p {
+  color: #1e3d59; /* Azul oscuro para el texto */
+  font-size: 1.1em;
+}
+
+.comment strong {
+  font-weight: 700;
+}
+
+.comment-time {
+  font-size: 0.9em;
+  color: #6c757d; /* Gris suave para la fecha */
+  margin-top: 10px;
+}
